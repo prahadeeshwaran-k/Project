@@ -1,4 +1,4 @@
-
+//Arduino/ArduinoRotaryEncoder/ArduinoRotaryEncoder.ino
 #define ENC_A 2
 #define ENC_B 3
 volatile int counter = 0;
