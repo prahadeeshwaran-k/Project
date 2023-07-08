@@ -1,3 +1,4 @@
+//https://www.circuitbasics.com/how-to-setup-and-program-rotary-encoders-on-the-arduino/
 int clkPin = 3;
 int dtPin = 4;
 int switchPin = 12;
