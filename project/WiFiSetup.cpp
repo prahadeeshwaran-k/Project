@@ -1,11 +1,14 @@
 #include "WiFiSetup.h"
+#include <ArduinoLog.h>
+
 
 // Define the variables here
-const char *ssid = "Note";
-const char *password = "00000000";
+const char *ssid = "rubikscube29";
+const char *password = "rubikscube299";
 
 void WiFiStationConnected(WiFiEvent_t event, WiFiEventInfo_t info) {
   Serial.println("Connected to AP successfully!");
+  Log.notice(F("WiFiStationConnected                  : %s" CR), "Connected to AP successfully!");
 }
 
 void WiFiGotIP(WiFiEvent_t event, WiFiEventInfo_t info) {
@@ -43,8 +46,6 @@ void WiFiStationDisconnected(WiFiEvent_t event, WiFiEventInfo_t info) {
 }
 
 void WiFiSetup() {
-  Serial.begin(115200);
-  vTaskDelay(500);
 
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
